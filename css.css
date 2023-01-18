@@ -97,7 +97,7 @@ h1 {
   display: inline;
 }
 
-h2 {
+div > h2 {
   /* font-family: 'CalligraphyFLF', sans-serif; */
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Roboto', sans-serif;
