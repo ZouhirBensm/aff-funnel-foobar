@@ -20,8 +20,8 @@ function initPayPalButton() {
         // Full available details
         console.log('Capture result\n', orderData);
         // console.log('Capture result\n', JSON.stringify(orderData, null, 2));
-        var clientPPname = `${orderData.payer.name.given_name} ${orderData.payer.name.surname}`
-        var clientPPemail = orderData.payer.email_address
+        window.clientPPname = `${orderData.payer.name.given_name} ${orderData.payer.name.surname}`
+        window.clientPPemail = orderData.payer.email_address
 
         // Show a success message within this page, e.g.
         const element = document.getElementById('paypal-button-container');
