@@ -27,7 +27,13 @@ function initPayPalButton() {
         const element = document.getElementById('paypal-button-container');
         element.innerHTML = '';
 
-        $("#payment-processed-div").load("../html/thanks_link.html");
+        
+        if (orderData.status == 'COMPLETED'){
+          $("#payment-processed-div").load("../html/thanks_link.html");
+        } else {
+          $("#payment-processed-div").load("../html/payment_error.html");
+        }
+        return
 
       });
     },
