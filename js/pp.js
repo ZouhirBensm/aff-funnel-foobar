@@ -70,11 +70,11 @@ function initPayPalButton() {
 
         for (let i = 0; i < namesSpans?.length; i++) {
           const name = namesSpans[i];
-          name?.innerHTML = clientPPname
+          name.innerHTML = clientPPname
         }
         for (let i = 0; i < emailsSpans?.length; i++) {
           const email = emailsSpans[i];
-          email?.innerHTML = clientPPemail
+          email.innerHTML = clientPPemail
         }
         
         return
