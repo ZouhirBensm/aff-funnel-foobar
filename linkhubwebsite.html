@@ -9,6 +9,10 @@
   <link href="./css.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/80d236052e.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./imgs/favicon.png" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery-3.6.3.min.js"><\/script>');
+  </script>
 </head>
 
 <body>
@@ -17,10 +21,10 @@
       <img id="main-logo" src="./imgs/foobar.png">
     </header>
 
-    <h2>Link Hub website</h2>
+    <h2>Link Hub Website <span style="color:rgb(132, 247, 132);">20$</span></h2>
     <h3>You Get</h3>
     <ol>
-      <li>Link Hub website, that resembles to <a style="color:blue;min-width: fit-content;" target="_blank"
+      <li>Link Hub Website, that resembles to <a style="color:blue;min-width: fit-content;" target="_blank"
           href="https://luxurybaboons.opom.ca"> Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
       <li>Website hosted with [username].github.io/[repository-name] domain</li>
       <li>Desktop, and mobile friendly website</li>
@@ -33,71 +37,18 @@
 
   </div>
 
+  <!-- _______________________________________________________________________________________________ -->
+
   <div id="smart-button-container">
     <div style="text-align: center; width: 100%;">
       <div id="paypal-button-container" style="width: 100%;"></div>
     </div>
   </div>
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=AR7WF5UYhS3umxVK1Cgcsf5WS-P0fZiCsd6B0FnvoYtWQ_WZssn4FMWpldKhzeTIazexCtMnpHRAqnOP&enable-funding=venmo&currency=USD"
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
     data-sdk-integration-source="button-factory"></script>
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'blue',
-          layout: 'vertical',
-          label: 'paypal',
 
-        },
 
-        createOrder: function (data, actions) {
-          return actions.order.create({
-            purchase_units: [{ "description": "Custom Link Hub Website hosted on Github\nDomain from Github", "amount": { "currency_code": "USD", "value": 1 } }]
-          });
-        },
-
-        onApprove: function (data, actions) {
-          return actions.order.capture().then(function (orderData) {
-
-            // Full available details
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-            // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
-            element.innerHTML = '';
-
-            const divAfterPaymentProcessed = document.getElementById('payment-processed-div')
-            divAfterPaymentProcessed.innerHTML = `              
-            <div>
-              <h3 style="color:green;"">Thank you for your payment! It has been processed!</h3>
-              <h3>Please Follow these steps so that the webmaster at Foobar start's setting up your website</h3>
-              <h4>Send the following information to foobaropom@outlook.com</h4>
-              <ol>
-                <li>Name, Associated and used paypal Email</li>
-                <li>Color Scheme</li>
-                <li>Font names</li>
-                <li>Logo image: Preferably .png format, with a width and height of no less than 200px * 200px</li>
-                <li>Category names and link titles associated</li>
-                <li>For each link, we will need: Title</li>
-                <li>Full URL</li>
-                <li>and, associated image, that image no less than 100px * 100px</li>
-              </ol>
-
-              <span>All comunications going forward will be with foobaropom@outlook.com. Invoice, steps, and contact will be sent to the e-mail linked to your paypal as soon as possible. Because we currently do most of our process' manually, the response time can be up to 3 business days. If you require a custom domain, or custom edit, a fee of 10 USD will be charged. The satisfaction of our clients is important, therefor we are sure to suit your needs. Thank you for choosing foobar!</span>
-            </div>
-            `
-          });
-        },
-
-        onError: function (err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
+  <script src="js/pp_link.js"></script>
 
 </body>
 
