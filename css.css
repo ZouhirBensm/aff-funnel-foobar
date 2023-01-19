@@ -81,7 +81,10 @@ body * {
   /* overflow: hidden; */
 }
 
-div {
+/* div */
+div#total-payment-div,
+div#payment-processed-div,
+div#home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
