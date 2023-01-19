@@ -45,14 +45,14 @@
   src: url('./fonts/AstronBoyWonder.ttf') format('truetype');
 }
 
-#promotion-banner {
+div#promotion-banner {
   background-color: gray;
   color: #ffffff;
   display: block;
   width: 100%;
 }
 
-#promotion-banner > span {
+div#promotion-banner > span {
   margin: 0 auto;
   display: block;
   width: fit-content;
