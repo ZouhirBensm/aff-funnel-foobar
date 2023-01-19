@@ -154,7 +154,7 @@ img.aff-img {
   width: 100px;
   height: 100px;
   margin: 10px;
-  min-width: fit-content;
+  /* min-width: fit-content; */
 }
 
 
