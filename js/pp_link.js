@@ -29,9 +29,9 @@ function initPayPalButton() {
 
         
         if (orderData.status == 'COMPLETED'){
-          $("#payment-processed-div").load("../html/thanks_link.html");
+          $("#payment-processed-div").load("./html/thanks_link.html");
         } else {
-          $("#payment-processed-div").load("../html/payment_error.html");
+          $("#payment-processed-div").load("./html/payment_error.html");
         }
         return
 
