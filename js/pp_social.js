@@ -1,3 +1,4 @@
+// TODO to delete entire file
 function initPayPalButton() {
   paypal.Buttons({
     style: {
@@ -20,22 +21,40 @@ function initPayPalButton() {
         // Full available details
         console.log('Capture result\n', orderData);
         // console.log('Capture result\n', JSON.stringify(orderData, null, 2));
-        window.clientPPname = `${orderData.payer.name.given_name} ${orderData.payer.name.surname}`
-        window.clientPPemail = orderData.payer.email_address
+        const clientPPname = `${orderData.payer.name.given_name} ${orderData.payer.name.surname}`
+        const clientPPemail = orderData.payer.email_address
 
         // Show a success message within this page, e.g.
-        const element = document.getElementById('paypal-button-container');
-        element.innerHTML = '';
+        const ppButtonContainer = document.getElementById('paypal-button-container');
+        ppButtonContainer.innerHTML = '';
 
 
-        if (orderData.status == 'COMPLETED'){
+        if (orderData.status == 'COMPLETED') {
           $("#payment-processed-div").load("./html/thanks_social.html");
         } else {
           $("#payment-processed-div").load("./html/payment_error.html");
         }
+
+        // Add the names, emails here
+        let namesSpans = document.getElementsByClassName('name');
+        for (let i = 0; i < namesSpans.length; i++) {
+          const name = namesSpans[i];
+          name.innerHTML = clientPPname
+        }
+        let emailsSpans = document.getElementsByClassName('email');
+        for (let i = 0; i < emailsSpans.length; i++) {
+          const email = emailsSpans[i];
+          email.innerHTML = clientPPemail
+        }
+
         return
 
+
+
       });
+
+
+
     },
 
     onError: function (err) {
