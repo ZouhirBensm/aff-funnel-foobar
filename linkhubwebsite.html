@@ -16,24 +16,48 @@
 </head>
 
 <body>
+  <div id="promotion-banner">
+    <span>Everything <span style="color:rgb(205, 255, 205);">-50%</span> off, for limited time.</span>
+  </div>
   <div id="total-payment-div">
     <header>
       <img id="main-logo" src="./imgs/foobar.png">
     </header>
 
-    <h2>Link Hub Website <span style="color:rgb(132, 247, 132);">20$</span></h2>
-    <h3>You Get</h3>
-    <ol>
-      <li>Link Hub Website, that resembles to <a style="color:blue;min-width: fit-content;" target="_blank"
-          href="https://zouhirbensm.github.io/sellable-linkhub/"> Demo <i
-            class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-      <li>Website hosted with [username].github.io/[repository-name] domain</li>
-      <li>Desktop, and mobile friendly website</li>
-      <!-- <li>No Hosting Fees</li> -->
-      <li>Hosting fees may apply</li>
-      <li>Website will contain 10 links max</li>
-      <li>A maximum of 5 days from when ressources are gathered to deliver website</li>
-    </ol>
+    <div id="content-bloc-div">
+      <h2>Option 1: Link Hub Website <span style="color:rgb(0, 163, 0);">20$</span> <s style="color:rgb(255, 34, 34);">$40</s></h2>
+      <h3>You Get</h3>
+      <ol>
+        <li>Resembles to <a style="color:blue;min-width: fit-content;" target="_blank"
+        href="https://zouhirbensm.github.io/sellable-linkhub/"> Demo <i
+        class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li>Website hosted with [username].github.io/[repository-name] domain</li>
+        <li>Desktop, and mobile friendly website</li>
+        <!-- <li>No Hosting Fees</li> -->
+        <li>Hosting fees may apply</li>
+        <li>A maximum of 5 days from when ressources are gathered to deliver website</li>
+      </ol>
+      
+      <h2>Option 2: Link Hub Website with payment processors pages for all links <span style="color:rgb(0, 163, 0);">220$</span> <s style="color:rgb(255, 34, 34);">$440</s></h2>
+      <!-- <h3>We will add</h3> -->
+      <ol>
+        <li>Resembles to <a style="color:blue;min-width: fit-content;" target="_blank"
+        href="https://zouhirbensm.github.io/sellable-linkhub/"> Demo <i
+        class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li>Can be used to sell your services</li>
+        <li>When user click's a link, then he gets redirected to payment page</li>
+        <li>Payment Page has Title, service/product description and paypal pay buttons</li>
+        <li>A maximum of 8 days from when ressources are gathered to deliver website</li>
+      </ol>
+  
+      <h2>Optional Extra's, Invoiced After</h2>
+      <ol>
+        <li>Custom domain setup <span style="color:rgb(0, 163, 0);">50$</span> <s style="color:rgb(255, 34, 34);">$100</s></li>
+        <li>Page Edit <span style="color:rgb(0, 163, 0);">10$</span> <s style="color:rgb(255, 34, 34);">$20</s></li>
+      </ol>
+  
+      <h2>Please Choose, then Pay</h2>
+    </div>
 
     <div id="payment-processed-div"></div>
 
@@ -41,18 +65,20 @@
 
   <!-- _______________________________________________________________________________________________ -->
 
-  <div id="smart-button-container">
-    <div style="text-align: center; width: 100%">
-      <div id="paypal-button-container" style="width: 100%"></div>
+    <div id="smart-button-container" style="width: fit-content; margin: 0 auto;">
+      <div style="text-align: center;">
+        <div id="drop-down" style="margin-bottom: 1.25rem; padding: 7px;">
+          <p style="margin: 5px auto;">Link Hub Website</p>
+          <select id="item-options" style="margin: 0 auto; width: 80%;"><option value="Link Hub Website" price="20">Link Hub Website - 20 USD</option><option value="Link Hub Website with payment processors pages for all links" price="220">Link Hub Website with payment processors pages for all links - 220 USD</option></select>
+          <select style="visibility: hidden" id="quantitySelect"></select>
+        </div>
+      <div id="paypal-button-container"></div>
+      </div>
     </div>
-  </div>
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=AR7WF5UYhS3umxVK1Cgcsf5WS-P0fZiCsd6B0FnvoYtWQ_WZssn4FMWpldKhzeTIazexCtMnpHRAqnOP&enable-funding=venmo&currency=USD"
-    data-sdk-integration-source="button-factory"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AR7WF5UYhS3umxVK1Cgcsf5WS-P0fZiCsd6B0FnvoYtWQ_WZssn4FMWpldKhzeTIazexCtMnpHRAqnOP&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
 
-
-
-  <script src="js/pp.js"></script>
+    
+    <script src="js/pp2.js"></script>
 
 </body>
 
