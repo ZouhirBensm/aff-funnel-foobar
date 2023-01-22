@@ -168,6 +168,11 @@ img#main-logo {
 }
 
 
+section:nth-of-type(1) a.aff-img,
+section:nth-of-type(1) img.aff-img {
+  width: 200px;
+  height: 200px;
+}
 
 a.aff-img,
 img.aff-img {
@@ -236,7 +241,7 @@ section li#special-grid-li {
   grid-template-areas: 
   "image title"
   "note note";
-  grid-template-columns: 120px auto;
+  grid-template-columns: 220px auto;
 
 }
 
