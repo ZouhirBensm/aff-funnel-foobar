@@ -91,8 +91,8 @@ function initPayPalButton() {
             page_needed = "./html/thanks_link_20.html"
             product = "Link Hub Website"
             break;
-          case '220.00':
-            page_needed = "./html/thanks_link_220.html"
+          case '70.00':
+            page_needed = "./html/thanks_link_70.html"
             product = "Link Hub Website with payment processors pages for all links"
             break;
           default:
