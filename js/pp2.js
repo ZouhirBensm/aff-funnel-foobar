@@ -67,7 +67,7 @@ function initPayPalButton() {
       });
     },
     onApprove: function (data, actions) {
-      return actions.order.capture().then(function (orderData) {
+      return actions.order.capture().then(async function (orderData) {
 
         // Full available details
         console.log('Capture result\n', orderData);
@@ -85,12 +85,15 @@ function initPayPalButton() {
 
 
         let page_needed;
+        let product;
         switch (orderData.purchase_units[0]?.amount.value) {
           case '20.00':
             page_needed = "./html/thanks_link_20.html"
+            product = "Link Hub Website"
             break;
           case '220.00':
             page_needed = "./html/thanks_link_220.html"
+            product = "Link Hub Website with payment processors pages for all links"
             break;
           default:
             page_needed = "./html/thanks_link.html"
@@ -98,34 +101,8 @@ function initPayPalButton() {
         }
 
         if (orderData.status == 'COMPLETED') {
-
-          $.ajax({
-            url: page_needed,
-            success: function (data) {
-              // Get the paymentProcessedDiv element where the HTML should be inserted
-              var paymentProcessedDiv = document.getElementById("payment-processed-div");
-              // Insert the HTML into the paymentProcessedDiv element
-              paymentProcessedDiv.innerHTML = data;
-              return
-            }
-          })
-          .then(() => {
-            // Add the names, emails here
-            let namesSpans = document.getElementsByClassName('name');
-            let emailsSpans = document.getElementsByClassName('email');
-
-
-            for (let i = 0; i < namesSpans?.length; i++) {
-              const name = namesSpans[i];
-              name.innerHTML = clientPPname
-            }
-            for (let i = 0; i < emailsSpans?.length; i++) {
-              const email = emailsSpans[i];
-              email.innerHTML = clientPPemail
-            }
-
-            return
-          })
+          await ajaxCall1(page_needed, clientPPname , clientPPemail);
+          await ajaxCall2(product, clientPPname , clientPPemail);
         } else {
           $("#payment-processed-div").load("./html/payment_error.html");
         }
