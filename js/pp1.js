@@ -37,9 +37,21 @@ function initPayPalButton() {
         const page_needed = "./html/thanks_social.html"
         const product = "Social Media Hub Website"
 
+        const client_info_to_database = {
+          date_time: orderData.create_time,
+          client_country: orderData.payer.address.country_code,
+          email: orderData.payer.email_address,
+          first_name: orderData.payer.name.given_name,
+          last_name: orderData.payer.name.surname,
+          transaction_amount: orderData.purchase_units[0].amount.value,
+          item_name: orderData.purchase_units[0].description,
+          transaction_currency_code: orderData.purchase_units[0].amount.currency_code,
+        }
+
         if (orderData.status == 'COMPLETED') {
           await ajaxCall1(page_needed, clientPPname , clientPPemail);
           await ajaxCall2(product, clientPPname , clientPPemail);
+          await ajaxCall3(client_info_to_database);
         } else {
           $("#payment-processed-div").load("./html/payment_error.html");
         }
