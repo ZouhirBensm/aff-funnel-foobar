@@ -237,16 +237,21 @@ section li {
   overflow: hidden;
 }
 
-section li#special-grid-li {
+section li.special-grid-li {
   display: grid;
   grid-template-areas: 
   "image title"
   "note note";
-  grid-template-columns: 220px auto;
-
 }
 
-li#special-grid-li > a {
+section:nth-of-type(1) li.special-grid-li {
+  grid-template-columns: 220px auto;
+}
+section:nth-of-type(2) li.special-grid-li {
+  grid-template-columns: 120px auto;
+}
+
+li.special-grid-li > a {
   width: fit-content;
 }
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>© Official Foobar/emailauto</title>
+  <link href="./css.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/80d236052e.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./imgs/favicon.png" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery-3.6.3.min.js"><\/script>');
+  </script>
+</head>
+
+<body>
+  <div id="promotion-banner">
+    <span>Everything <span style="color:rgb(205, 255, 205);">-50%</span> off, for limited time.</span>
+  </div>
+  <div id="total-payment-div">
+    <header>
+      <img id="main-logo" src="./imgs/foobar.png">
+    </header>
+
+    <div id="content-bloc-div">
+      <h2>Email Automation <span style="color:rgb(132, 247, 132);">CAD $6.5/mo</span> <s
+          style="color:rgb(255, 34, 34);">CAD $13/mo</s></h2>
+      <h3>You Get</h3>
+      <ol>
+        <li>Automatic email sent</li>
+        <li>Email sent after a certain trigger e.g. After PayPal payment, or a form submission </li>
+        <li>Email sent out can have unlimited amount of attachments </li>
+      </ol>
+
+
+    </div>
+    <div id="payment-processed-div"></div>
+    <!-- _______________________________________________________________________________________________ -->
+
+
+
+    <!-- paypal.com -->
+    <div style="text-align: center; width: 100%" class="pp" id="paypal-button-container-P-063547933P378935NMPOSXIQ"></div>
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=AR7WF5UYhS3umxVK1Cgcsf5WS-P0fZiCsd6B0FnvoYtWQ_WZssn4FMWpldKhzeTIazexCtMnpHRAqnOP&vault=true&intent=subscription"
+      data-sdk-integration-source="button-factory">
+    </script>
+
+
+
+    <!-- sandbox.paypal.com -->
+    <!-- <div style="text-align: center; width: 100%" class="pp" id="paypal-button-container-P-5BL91597J0728543TMPOS7LQ"></div>
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=AW5T1KPDWLLxmgUs84c2oDLerTr7S7dQxZagwVmENL55JLL1sjMFgvgK6ynotcKhH9srVXCTjIS83lqE&vault=true&intent=subscription"
+      data-sdk-integration-source="button-factory">
+    </script> -->
+
+
+  <script src="js/after-payment-process/asyncCall4.js"></script>
+  <!-- <script src="js/after-payment-process/asyncCall2.js"></script>
+  <script src="js/after-payment-process/asyncCall3.js"></script> -->
+  <script src="js/pp3.js"></script>
+
+</body>
+
+</html>
