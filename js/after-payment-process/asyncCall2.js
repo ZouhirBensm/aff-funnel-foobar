@@ -1,4 +1,6 @@
 async function ajaxCall2(product, clientPPname, clientPPemail){
+  // TODO have an environment variable to determin what url to use
+  
    // var url = 'http://localhost:8888/HTTP/Foobar/send-client-email-process/index.php'
    var url = 'https://webdevelopercanada.website/HTTP/Foobar/send-client-email-process/index.php'
 
