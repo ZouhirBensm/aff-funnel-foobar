@@ -162,8 +162,8 @@ a {
 
 img#main-logo {
   min-width: 100px;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
   margin: 0 10px;
 }
@@ -311,6 +311,8 @@ div.thank-you-bloc a:hover {
 section li {
   /* background-color: rgba(122, 0, 133, 0.189); */
   background-color: #0000009f;
+  box-shadow: 4px -50px 49px -25px rgba(150, 150, 150, 1)
+
 }
 
 /* visited state */
