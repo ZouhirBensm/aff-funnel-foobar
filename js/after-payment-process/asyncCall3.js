@@ -1,4 +1,5 @@
 
+// Registers client in DB on Hostgator
 async function ajaxCall3(client_info_to_database){
 
   // let url = 'http://localhost:8888/HTTP/Foobar/save-client-information-in-db-process/index.php'
