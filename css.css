@@ -196,6 +196,7 @@ span#extra-info {
   max-width: 380px;
   text-align: center;
   margin: 0 auto;
+  padding: 10px 0; 
 }
 
 
@@ -261,6 +262,7 @@ section li * {
 
 section li a {
   margin: 0;
+  padding: 10px;
 }
 
 
@@ -363,8 +365,8 @@ footer {
 
 footer > span:first-child {
   background-color: rgba(0, 0, 0, 0.481);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   display: block;
-  
+  /* box-shadow: 4px -50px 49px -25px rgb(150 150 150); */
 }
