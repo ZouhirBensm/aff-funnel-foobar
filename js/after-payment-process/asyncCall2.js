@@ -1,3 +1,4 @@
+// Sends the client an email
 async function ajaxCall2(product, clientPPname, clientPPemail){
   // TODO have an environment variable to determin what url to use
   

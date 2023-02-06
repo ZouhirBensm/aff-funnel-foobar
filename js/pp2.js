@@ -113,6 +113,7 @@ function initPayPalButton() {
 
 
         if (orderData.status == 'COMPLETED') {
+          // TODO merge 2 and 3 calls to 1 call
           await ajaxCall1(page_needed, clientPPname , clientPPemail);
           await ajaxCall2(product, clientPPname , clientPPemail);
           await ajaxCall3(client_info_to_database);
