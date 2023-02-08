@@ -6,7 +6,7 @@ execDeterminator();
 // Track user clicks
 function execDeterminator() {
 
-  console.log("execDeterminator")
+  // console.log("execDeterminator")
   var referrer = document.referrer;
 
   // URL got Copy and Pasted
@@ -31,7 +31,7 @@ function execDeterminator() {
 
 async function iterate() {
 
-    console.log("iterate")
+    // console.log("iterate")
 
     // TODO Add refferer tracking later
     // ${referrer_domain? `?referrer_domain=${referrer_domain}`: null}
