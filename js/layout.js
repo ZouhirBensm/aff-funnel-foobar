@@ -47,6 +47,13 @@ function function1(){
     img.style.marginTop = "10px";
     img.style.width = "200px";
     img.style.height = "200px";
+
+    const reg_extension = /\.[^\.]+$/
+    imgfileextension = img.src.match(reg_extension)
+    console.log(imgfileextension)
+    if (imgfileextension[0] === ".gif") {
+      img.style.border = "none";
+    }
     lis[i-1].insertBefore(img, lis[i-1].firstChild); 
   }
 }
@@ -70,6 +77,13 @@ function function2(){
     img.style.marginTop = "100px";
     img.style.width = "350px";
     img.style.height = "350px";
+
+    const reg_extension = /\.[^\.]+$/
+    imgfileextension = img.src.match(reg_extension)
+    console.log(imgfileextension)
+    if (imgfileextension[0] === ".gif") {
+      img.style.border = "5px solid black";
+    }
     lis[i-1].insertAdjacentElement('beforebegin', img);
   }
 }

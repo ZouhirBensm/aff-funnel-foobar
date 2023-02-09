@@ -352,7 +352,7 @@ section li {
   /* background-color: rgba(122, 0, 133, 0.189); */
   background-color: #000000d5;
   box-shadow: 4px -50px 49px -25px rgba(150, 150, 150, 1);
-  border: 7px solid #a3abff;
+  /* border: 7px solid #a3abff; */
 
 }
 
@@ -461,4 +461,26 @@ nav > a:hover {
 
 div.thank-you-bloc {
   font-size: 1.4rem;
+}
+
+
+
+a#Email > i {
+  color: black;
+}
+
+a#Pinterest > i {
+  color: rgb(137, 0, 44);
+}
+
+a#Youtube > i {
+  color: red;
+}
+
+a#Twitter > i {
+  color: blue;
+}
+
+a#Tiktok > i {
+  color: purple;
 }
