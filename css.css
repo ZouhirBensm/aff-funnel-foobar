@@ -455,3 +455,7 @@ nav > a:hover {
   color: black;
   text-decoration: underline;
 }
+
+div.thank-you-bloc {
+  font-size: 1.4rem;
+}
