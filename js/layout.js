@@ -67,7 +67,7 @@ function function2(){
 
   for(i = 1; i < imgs.length-1; i++){
     let img = imgs[i]
-    img.style.marginTop = "50px";
+    img.style.marginTop = "100px";
     img.style.width = "350px";
     img.style.height = "350px";
     lis[i-1].insertAdjacentElement('beforebegin', img);

@@ -46,7 +46,7 @@
 }
 
 div#promotion-banner {
-  background-color: gray;
+  background-color: #7c82c4;
   color: #ffffff;
   display: block;
   width: 100%;
@@ -173,8 +173,9 @@ div > h2 {
   /* font-family: 'CalligraphyFLF', sans-serif; */
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Roboto', sans-serif;
-  margin: 15px 30px;
+  margin: 75px 30px;
   width: fit-content;
+  text-decoration: underline;
   /* display: inline; */
 }
 
@@ -182,6 +183,7 @@ div > p {
   font-family: 'Roboto', sans-serif;
   margin: 15px 30px;
   width: fit-content;
+  font-size: 1.4rem;
 }
 
 a {
@@ -348,8 +350,9 @@ div.thank-you-bloc a:hover {
 /* non-clicked state */
 section li {
   /* background-color: rgba(122, 0, 133, 0.189); */
-  background-color: #0000009f;
-  box-shadow: 4px -50px 49px -25px rgba(150, 150, 150, 1)
+  background-color: #000000d5;
+  box-shadow: 4px -50px 49px -25px rgba(150, 150, 150, 1);
+  border: 7px solid #a3abff;
 
 }
 
@@ -442,7 +445,7 @@ footer > div {
 
 nav {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.354);
+  background-color: #a3abff;
   text-align: center;
   padding: 5px 0;
 }
