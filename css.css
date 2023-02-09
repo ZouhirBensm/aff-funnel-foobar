@@ -169,7 +169,7 @@ h1 {
   display: inline;
 }
 
-div > h2 {
+div#home-container > h2 {
   /* font-family: 'CalligraphyFLF', sans-serif; */
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Roboto', sans-serif;
