@@ -15,13 +15,16 @@ function execDeterminator() {
   var referrer_domain = new URL(referrer).hostname;
 
   // URL referrer is internal domain
-  if (referrer_domain === document.location.hostname) {
-    if (window.location.pathname !== '/') return iterate()
-    return
-  } else {
-    // URL got clicked by external domain
-    return iterate()
-  }
+  // if (referrer_domain === document.location.hostname) {
+  //   if (window.location.pathname !== '/') return iterate()
+  //   return
+  // } else {
+  //   // URL got clicked by external domain
+  //   return iterate()
+  // }
+
+  console.log("referrer_domain", referrer_domain)
+  return iterate(referrer_domain)
 
 }
 
@@ -29,7 +32,7 @@ function execDeterminator() {
 
 
 
-async function iterate() {
+async function iterate(referrer_domain = undefined) {
 
   // console.log("iterate")
 
@@ -42,7 +45,7 @@ async function iterate() {
 
   $.ajax({
     url: url,
-    data: { body: JSON.stringify({ pathname: window.location.pathname }) },
+    data: { body: JSON.stringify({ pathname: window.location.pathname, referrer_domain: referrer_domain }) },
     type: 'POST',
     success: function (response) {
       console.log("track-clicks: registerClickCall()->", response)

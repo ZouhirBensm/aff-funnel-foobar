@@ -80,7 +80,7 @@ function function2(){
 
     const reg_extension = /\.[^\.]+$/
     imgfileextension = img.src.match(reg_extension)
-    console.log(imgfileextension)
+    // console.log(imgfileextension)
     if (imgfileextension[0] === ".gif") {
       img.style.border = "5px solid black";
     }
