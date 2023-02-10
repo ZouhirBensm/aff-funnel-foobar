@@ -9,6 +9,7 @@ function execDeterminator() {
   // console.log("execDeterminator")
   var referrer = document.referrer;
 
+  console.log("referrer", referrer)
   // URL got Copy and Pasted
   if (!referrer) return iterate()
 
