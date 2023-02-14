@@ -154,14 +154,32 @@ header {
   /* overflow: hidden; */
   flex-direction: column;
   width: 100%;
-  background-image: url('./imgs/banner2.gif');
+  /* background-image: url('./imgs/banner.mp4'); */
   /* background-color: rgb(17, 0, 255); */
+  /* background: url('./imgs/banner.mp4'); */
   background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
   background-size: 100% 100%;
   padding: 100px 0;
   background-color: #1e345f;
+  box-sizing: border-box;
+  max-height: 512px;
+}
+
+header > div {
+  z-index: 1;
+}
+
+#bg-video {
+  position: absolute;
+  margin: 0;
+  min-height: 512px;
+  object-fit: cover;
+  /* height: 512px; */
+  /* height: auto; */
+  /* width: 100%;
+  width: 100%; */
 }
 
 h1 {
@@ -190,7 +208,7 @@ a {
   font-family: 'Roboto', sans-serif;
   /* font-family: 'CalligraphyFLF', sans-serif; */
   /* font-family: 'Magz', sans-serif; */
-  margin: 0 10px;
+  /* margin: 0 10px; */
 }
 
 img#main-logo {
@@ -493,3 +511,7 @@ a#Reddit > i {
   color: #ff4500;
 }
 
+video {
+  display: block;
+  margin: 10px auto;
+}

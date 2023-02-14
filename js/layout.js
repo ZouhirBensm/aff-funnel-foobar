@@ -41,6 +41,7 @@ function function1(){
   
   
   let imgs = document.getElementsByTagName("img");
+  let vids = document.getElementsByTagName("video");
 
   for(let i = 1; i < imgs.length-1; i++){
     let img = imgs[i]
@@ -56,6 +57,18 @@ function function1(){
     }
     lis[i-1].insertBefore(img, lis[i-1].firstChild); 
   }
+
+  for(let i = 1; i < vids.length; i++){
+    let vid = vids[i]
+    vid.style.marginTop = "10px";
+    vid.style.width = "200px";
+    vid.style.height = "200px";
+    vid.style.border = "none";
+    
+    lis[i-1].insertBefore(vid, lis[i-1].firstChild); 
+  }
+
+
 }
 
 
@@ -70,6 +83,7 @@ function function2(){
   }
   
   let imgs = document.getElementsByTagName("img");
+  let vids = document.getElementsByTagName("video");
   
 
   for(i = 1; i < imgs.length-1; i++){
@@ -85,5 +99,14 @@ function function2(){
       img.style.border = "5px solid black";
     }
     lis[i-1].insertAdjacentElement('beforebegin', img);
+  }
+
+  for(i = 1; i < vids.length; i++){
+    let vid = vids[i]
+    vid.style.marginTop = "10px";
+    vid.style.width = "350px";
+    vid.style.height = "350px";
+    vid.style.border = "5px solid black";
+    lis[i-1].insertAdjacentElement('beforebegin', vid);
   }
 }
